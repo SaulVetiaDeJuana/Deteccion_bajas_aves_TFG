@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+        <style>
+            h1 {text-align: center;}
+            .texto_centrado{  
+            text-align: center;  
+            }
+        </style>
+        <h1>ENTRENADOR DEL MODELO</h1>
+        <div class="texto_centrado">
+            <form method="POST", action="/entrenar_guardar">
+                <input type="submit" name="boton_entrenar_guardar" value="Entrenar modelo">
+                <br></br>
+                <input type="submit" name="boton_entrenar_guardar" value="Guardar modelo">
+                <br></br>
+                <input type="submit" name="boton_entrenar_guardar" value="Comprobar precision">
+                <br></br>
+                <p><strong>Estado del modelo--> {{mensaje_estado}}</strong></p>
+            </form>
+        </div>
+        <div class="texto_centrado">
+            <form method="POST", action="/CambiarVentana2">
+                <input type="submit" name="boton_cambiar" value="Cambiar ventana">
+            </form>
+        </div>
+    </head>
+    <body>
+
+    </body>
+</html>

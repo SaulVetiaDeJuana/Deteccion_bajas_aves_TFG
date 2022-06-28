@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% if mensaje_predict %}
+   Resultado de la predicción: {{mensaje_predict}}
+{% else %}
+    Resultado de la predicción: 
+{% endif %}
+
+{% if mensaje_conta %}
+    Bajas totales en esta jaula: {{mensaje_conta}}
+{% else %}
+    Bajas totales en esta jaula: 
+{% endif %}
+
+{% if mensaje_estado %}
+    Estado del entrenamiento: {{mensaje_estado}}
+{% else %}
+    Estado del entrenamiento: 
+{% endif %}
+
+{% block head %}
+<h1>DETECTOR DE BAJAS</h1>
+<div class="texto_centrado">
+    <form method="POST", action="/clasificador">
+        <input type="submit" name="boton_clasificar" value="Clasificar imagenes">
+        <br></br>
+        <p><strong>Resultado de la predicción: {{mensaje_predict}}</strong></p>
+    </form>
+</div>
+<div class="texto_centrado">
+    <form method="POST", action="/contador">
+        <input type="submit" name="boton_contador" value="Resetear contador">
+        <br></br>
+        <p><strong>Bajas totales en esta jaula: {{mensaje_conta}}</strong></p>
+    </form>
+</div>
+<div >
+    <form method="POST", action="/CambiarVentana1">
+        <input type="submit" name="boton_cambiar" value="Cambiar ventana">
+    </form>
+</div>
+{% endblock %}
+
+{% block body %}
+{% endblock %}
