@@ -1,2 +1,5 @@
 Ficheros de la aplicación web.
-Para el correcto uso de la aplicación, descargar la carpeta "webapp" completa y moverla al lugar donde se desee almacenar la app. Desde ese directorio, ejecutar el fichero "Ejecutable.bat". Para cerrar el servidor web, pulsar CTRL+C en el terminal.
+Para el correcto uso de la aplicación seguir los siguientes pasos:
+-Instalar las dependencias necesarias ejecutando el archivo "Instalador.bat". Si no funcionara, leer el archivo requirements.txt e instalar las librerías una a una usando pip.
+-Ejecutar la aplicación web utilizando "Launcher app.bat"
+-Abrir la web de la aplicación utilizando "Launcher browser.bat"
